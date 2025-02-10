@@ -48,3 +48,5 @@ Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-
 Lass uns das ausprobieren: Klone dieses ``tutorial`` repository! Dies sollte ein lokales Verzeichnis auf deinem Rechner (in einem beliebigen Ort) namens ``tutorial``, wo darin alle Dateien dieses Repositorys liegen.
 <img src="action-arrow.png" alt="action" width="15" />
 
+
+

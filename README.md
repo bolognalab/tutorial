@@ -22,7 +22,7 @@ In diesem Tutorial lernst du nicht:
 
 <hr>
 
-## 1. Definitionen
+# 1. Grundlagen und Begriffe für das Arbeiten mit Github
 
 ### Was ist Github?
 Github ist ein (grundsätzlich) kostenloser Dienst für die gemeinsame Entwicklung von Softwareprojekten. Seine Grundlage ist die Software [Git](https://de.wikipedia.org/wiki/Git), die nichts anderes als ein **Versionsverwaltungsystem** ist.
@@ -34,14 +34,14 @@ Ein Versionsverwaltungssystem ist eine Herangehensweise, Änderungen in einem Do
 * Änderungen (auch solche, die mehrere Schritte zuvor vorgenommen wurden) immer rückgängig gemacht werden können
 * jemand an einer umfangreichen Änderung in einer parallelen „Version“ des Projekts arbeiten kann, während das Hauptprojekt unabhängig davon weiterbearbeitet werden kann. Wenn die Änderung bereit für die Implementierung ist, dann werden alle Änderungen (sowohl die im Hauptprojekt als auch die in der parallelen Version) automatisch (oder fast immer automatisch) miteinander in Einklang gebracht.
 
-### Relevante Begriffe für die Arbeit mit Github
-#### Repository
+### Relevante Begriffe: 
+## Repository
 Ein _Repository_ ist ein Ordner, dessen Versionierung verwaltet wird. Das könnte die Quellcode einer Webseite oder Software sein aber auch ein Ordner mit experimentellen Daten, die mithilfe eines Softwares ausgewertet werden oder auch eine Masterarbeit, die mithilfe _LaTeX_ geschrieben wird. Ein Repository hat eine **remote**-Version (im "Cloud", auf der Github-Website), sowie mehrere **lokale** Versionen (z.B. auf deinem Computer). Die remote-Version wird auch ``origin`` genannt. Ein Repository kann auch "gespiegelt" werden (z.B. zu einem Repository in einem anderen Dienst), aber das ist für dieses Tutorial nicht so interessant.
 
 ##### Datei-Typen in einem Repository
 Das Repository könnte beliebige Unterordner und Dateitypen enthalten (Texte Dateien, Bilder, Videos, PDF, usw.) - aber von der Versionsverwaltung (die auf Zeilenebene der einzelnen Dateien funktioniert) profitieren am meisten **textbasierte Dateien**, z.B. ``.txt.``, ``.html``, ``.css``, ``.json`` usw. Andere Dateien wie z.B. Word-Dateien können nur als ganze Dateien betrachtet werden.
 
-#### Klonen
+## Klonen
 Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-Repository **klonen** - das erstellt eine lokales Repository sowie ein lokales Verzeichnis (local directory) auf deinem Rechner.
 
 :pencil2: **Ausprobieren**
@@ -49,7 +49,7 @@ Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-
 * Klicke dann auf _"Show in Explorer"_, um das Verzeichnis namens ``tutorial`` lokal zu öffnen. 
 * Darin solltest du alle Inhalte des Repositorys sehen können, einschließlich der Datei ``playground.md``. Mache aber noch nichts mit dieser Datei.
 
-#### Branches
+## Branches
 ![](branches.png)
 "Branches" sind parallelle "Zweigen" oder Versionen des Repositorys. Der Hauptbranch eines Repositorys auf Github heißt in der Regel (``main``). Ein neuer Branch fängt an als eine "Kopie" des Hauptbranches (oder sogar eines anderen Branches) und entwickelt sich parallel. Für Software-Projekte ist es in der Regel vorgesehen, dass eine Aufgabe zuerst in einem Branch durchgeführt und getestet wird, bevor die Änderungen am Ende in das gesamte Projekt zusammengeführt werden. Die Aktion der Zusammenführung heißt ``merge``. Für den ersten Teil des Live-Tutorials arbeiten wir an dem Branch ``workshop``, der schon erstellt wurde. Für spätere Teile werdest du die Chance haben, einen Branch selbst zu erstellen. 
 
@@ -57,7 +57,7 @@ Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-
 * Im Programm Github Desktop, wechsele zum Branch ``workshop``. 
 * Der lokale Ordner in deinem Rechner sollte das reflektieren, indem jetzt anstelle der Datei ``playground.md`` nun eine andere Datei ``playground-workshop.md`` sich befindet.
 
-#### Commits
+## Commits
 "Commits" können als einzelne "Savepoints" während der Arbeit an einem Repository betrachtet werden (wie die gefärbten Kreise im Bild oben). Bei einem Commit werden keine Dateien gespeichert _per se_, sondern **Änderungen** im Vergleich mit dem vorherigen Zustand. Für Änderungen in textbasierten Dateien werden Änderungen auf Zeilen-Ebene gespeichert, für andere Dateien wird das Hinzufügen, Löschen oder Ersetzen einer ganzen Datei als Änderung gespeichert. 
 
 Commits werden nur auf die Version des Repositorys angewandt, an dem die Person gerade arbeitet (_local_ oder _remote_) und werden nicht von der anderen Version "gesehen", bis das remote-Repository und das lokale Repository synchronisiert sind. Das Synchronisieren funktioniert durch drei Aktionen:
@@ -65,11 +65,19 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 * _pull_ : Aktualisiert dein lokales Repository mit neuen Commits aus dem remote-Repository
 * _push_ : Aktualisiert das remote-Repository mit neuen Commits aus dem lokalen Repository.
 
-
 :pencil2: **Ausprobieren**
 * Öffne die Datei ``playground-workshop.md`` (im Branch ``workshop``) mit einem Texteditor. 
 * Schreibe irgendwas unter einem der 4 Abschnitte. Speichere anschließend die Datei. 
 * Wechsele wieder zum Github Desktop. Deine Änderungen sollten unter "Changes" sichtbar sein.
 * Wähle einen deskriptiven Titel für die Aktion, die du gerade gemacht hast (z.B. "Abschnitt A ausgefüllt") und klicke auf _"Commit to workshop"_, um ein Commit durchzuführen.
 * Wechsele zu deinem Browser und schau dich das remote-Repository auf https://github.com/bolognalab/tutorial/tree/workshop an. Sind deine Änderungen schon da dargestellt? Wenn nicht, warum? :thought_balloon:
-* Wechsele zum Github Desktop
+* Wechsele zum Github Desktop und clicke auf _"Push Origin"_. Wenn du dazu aufgefordert bist, führe zuerst "_Fetch Origin_" und _"Pull Origin_" durch und danach "_Push Origin_".
+* Prüfe, ob jetzt die Änderungen in das remote-Repository erscheinen. Was hat sich geändert? :thought_balloon:
+
+:pencil2: **Mehr Ausprobieren (interessanter, wenn mehrere Personen das gleichzeitig tun)**
+* In deinem lokalen Verzeichnis, erstelle ein Ordner names ``images``.
+* Lade dort ein beliebiges Bild hoch (mit dem Hinweis, dass es öffentlich wird)
+* _Commite_ und _Pushe_ deine Änderungen wie zuvor.
+* Schaue dich die Remote-Version des Repositorys und beobachte, wie die Änderungen von dir und anderen miteinander zusammengeführt wurden.
+
+## Pull Requests

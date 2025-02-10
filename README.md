@@ -20,7 +20,6 @@ In diesem Tutorial lernst du nicht:
 * Den Quellcode-Editor [Visual Studio Code](https://code.visualstudio.com/) (VSCode) herunterzuladen und zu installieren.
 * Die VSCode Erweiterung [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) zu installieren (für den Vorschau von Webseiten).
 
-<hr>
 
 # 1. Grundlagen und Begriffe für das Arbeiten mit Github
 
@@ -45,6 +44,7 @@ Das Repository könnte beliebige Unterordner und Dateitypen enthalten (Texte Dat
 Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-Repository **klonen** - das erstellt eine lokales Repository sowie ein lokales Verzeichnis (local directory) auf deinem Rechner.
 
 :pencil2: **Ausprobieren**
+
 * Klone dieses ``tutorial`` Repository mithilfe Github Desktop zu einem beliebigen Ort auf deinem Rechner.
 * Klicke dann auf _"Show in Explorer"_, um das Verzeichnis namens ``tutorial`` lokal zu öffnen. 
 * Darin solltest du alle Inhalte des Repositorys sehen können, einschließlich der Datei ``playground.md``. Mache aber noch nichts mit dieser Datei.
@@ -54,6 +54,7 @@ Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-
 "Branches" sind parallelle "Zweigen" oder Versionen des Repositorys. Der Hauptbranch eines Repositorys auf Github heißt in der Regel (``main``). Ein neuer Branch fängt an als eine "Kopie" des Hauptbranches (oder sogar eines anderen Branches) und entwickelt sich parallel. Für Software-Projekte ist es in der Regel vorgesehen, dass eine Aufgabe zuerst in einem Branch durchgeführt und getestet wird, bevor die Änderungen am Ende in das gesamte Projekt zusammengeführt werden. Die Aktion der Zusammenführung heißt ``merge``. Für den ersten Teil des Live-Tutorials arbeiten wir an dem Branch ``workshop``, der schon erstellt wurde. Für spätere Teile werdest du die Chance haben, einen Branch selbst zu erstellen. 
 
 :pencil2: **Ausprobieren**
+
 * Im Programm Github Desktop, wechsele zum Branch ``workshop``. 
 * Der lokale Ordner in deinem Rechner sollte das reflektieren, indem jetzt anstelle der Datei ``playground.md`` nun eine andere Datei ``playground-workshop.md`` sich befindet.
 
@@ -66,6 +67,7 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 * _push_ : Aktualisiert das remote-Repository mit neuen Commits aus dem lokalen Repository.
 
 :pencil2: **Ausprobieren**
+
 * Öffne die Datei ``playground-workshop.md`` (im Branch ``workshop``) mit einem Texteditor. 
 * Schreibe irgendwas unter einem der 4 Abschnitte. Speichere anschließend die Datei. 
 * Wechsele wieder zum Github Desktop. Deine Änderungen sollten unter "Changes" sichtbar sein.
@@ -81,3 +83,29 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 * Schaue dich die Remote-Version des Repositorys und beobachte, wie die Änderungen von dir und anderen miteinander zusammengeführt wurden.
 
 ## Pull Requests
+:pencil2: **Ausprobieren**
+
+* Stell dir sicher, du bist noch auf dem Branch ``workshop``
+* In Github Desktop, klicke auf: _Current Branch: workshop > New Branch >_ [Name, z.B. _workshop-laura_] _, Create branch based on 'workshop'_. 
+* Klicke auf "_Publish Branch"
+* Füge beliebige Inhalte wie Textdateien Unterordner und Bilder hinzu. Wenn du bereit bist: _Commit your Changes_ > _Push Origin_ (ggf. auch Fetch/Pull).
+* Clicke auf "_Preview Pull Request_" und folge die Anleitungen auf dem Browser, um ein ``merge`` von deinem Branch zum ``workshop`` branch durchzuführen.
+
+## Conflicts
+
+
+## Organizations
+
+
+# 2. Webseiten mit Github Pages erstellen
+Für diesen Teil brauchen wir das Rad nicht neu zu erfinden, sondern wir die offizielle Dokumentation von Github benutzen: https://docs.github.com/de/pages/getting-started-with-github-pages/creating-a-github-pages-site 
+
+## HTML5-Vorlagen:
+https://html5up.net/
+Hier können HTML5 Vorlagen heruntergeladen werden - wenn die heruntergeladenen Dateien für eine Vorlage (und die vorgegebene Struktur) entpackt und in einem Github-Repository kopiert werden, dann ist die Seite schon bereit für den Einsatz! Die einzige Voraussetzung - wie in der Dokumentation angegeben - ist, dass der Name des Repositorys [username].github.io lautet. Die Seite ist dann unter ``https://[username].github.io`` abrufbar.
+
+:pencil2: **Ausprobieren**
+
+Suche dir eine Vorlage aus und erstelle eine Github-Pages-Seite in deinem eigenen Profil mithilfe der Dokumentation.
+
+_Hinweis: Nur das Username (z.B. ``naspitha``) (oder der Name einer Github-Organisation (z.b. ``bolognalab``)) darf hier angegeben werden - sonst funktioniert die Seite nicht. Daraus folgt, dass pro Nutzer:in und pro Organisation nur eine Seite mithilfe von Github Pages erstellt werden kann. Github Pages ist kostenlos und das Repository kann bis 1 GB Dateigröße enthalten._

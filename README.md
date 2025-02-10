@@ -8,9 +8,11 @@ In diesem Tutorial lernst du:
 * wie du mithilfe von *Github Pages* eine öffentliche Webseite mit HTML erstellen und die Texte darin bearbeiten kannst.
 * Ein Sneak-Preview, wie du mit CSS und HTML weitere Änderungen zur Struktur deiner Webseite vornehmen kannst.
 
-Während des Tutorials wirst du die [Markup](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)-Sprache Markdown nutzen, womit auch dieser Text geschrieben wird. Das benötigt keine spezialisierte Software und ist einfach zu lernen (falls du noch nicht damit auskennst)
+Während des Tutorials wirst du die Formattierungssprache [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) nutzen, womit auch dieser Text geschrieben wird. Das benötigt keine spezialisierte Software und ist einfach zu lernen (falls du noch nicht damit auskennst)
 
 In diesem Tutorial lernst du nicht:
 * neue, komplizierte Funktionen für deine Website zu programmieren
-* 
+* Github-Funktionen mit dem Command Prompt (CMD) zu steuern.
 
+<hr>
+## Was ist Github

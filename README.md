@@ -6,7 +6,7 @@ In diesem Tutorial lernst du:
 * wie du mithilfe von Github und einen Quellcode-Editor ein Repository erstellen und bearbeiten kannst
 * wie du kollaborativ an einem Repository arbeiten kannst
 * wie du mithilfe von *Github Pages* eine öffentliche Webseite mit HTML erstellen und die Texte darin bearbeiten kannst.
-* Ein Sneak-Preview, wie du mit CSS und HTML weitere Änderungen zur Struktur deiner Webseite vornehmen kannst.
+* Im Live-Workshop erhälst du auch in Sneak-Preview, wie du mit CSS und HTML weitere Änderungen zur Struktur deiner Webseite vornehmen kannst.
 
 Während des Tutorials wirst du die Formattierungssprache [Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) nutzen, womit auch dieser Text geschrieben wird. Das benötigt keine spezialisierte Software und ist einfach zu lernen (falls du noch nicht damit auskennst)
 

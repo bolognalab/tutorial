@@ -14,14 +14,32 @@ In diesem Tutorial lernst du nicht:
 * neue, komplizierte Funktionen für deine Website zu programmieren
 * Github-Funktionen mit dem Command Prompt (CMD) zu steuern.
 
+### Was du für dieses Tutorial brauchst:
+* Ein Konto auf [Github](https://github.com/signup) zu erstellen - vergiss nicht, Zwei-Faktor-Authentifizierung einzurichten.
+* [Github for Desktop](https://github.com/apps/desktop) herunterzuladen und zu installieren.
+* Den Quellcode-Editor [Visual Studio Code](https://code.visualstudio.com/) (VSCode) herunterzuladen und zu installieren.
+* Die VSCode Erweiterung [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) zu installieren (für den Vorschau von Webseiten).
+
 <hr>
 
-## 1.Fragen und Definitionen
+## 1. Definitionen
 
-#### *Was ist Github?*
+### Was ist Github?
 Github ist ein (grundsätzlich) kostenloser Dienst für die gemeinsame Entwicklung von Softwareprojekten. Seine Grundlage ist die Software [Git](https://de.wikipedia.org/wiki/Git), die nichts anderes als ein **Versionsverwaltungsystem** ist.
 
-#### *Und was ist ein Versionsverwaltungsystem?*
-Stell dir vor, Anna A. hat den ersten Entwurf eines langen Dokuments entworfen (z.B. eines wissenschaftlichen Artikels) und möchte Feedback von ihren Kollegen Max und Moritz holen. Es gibt drei Möglichkeiten, wie Anna damit umgehen könnte:
-1. Anna schickt eine Datei ``dokument_v1.docx`` erstmal an Max, wartet auf seine Änderungen, bekommt von ihm die ``dokument_v1_max.docx`` bereitet danach eventuell eine neue ``dokument_v2.docx`` und schickt sie danach an Moritz weiter. Das könnte viel Zeit in Anspruch nehmen, besonders wenn es mehrere Revisionsrunden gibt.
-2. Anna teilt die ``dokument_v1.docx`` gleichzeitig mit Max und Moritz. Nach einiger Zeit bekommt sie zwei Dokumente ``dokument_v1_max.docx`` und ``dokument_v1_moritz.docx``. Anna muss danach die Änderungen selbst in einer dritten Datei in Einklang bringen - was umständlich für sie ist, 
+*Und was ist ein Versionsverwaltungsystem?*
+
+Ein Versionsverwaltungssystem ist eine Herangehensweise, Änderungen in einem Dokument oder größerem Projekt nachzuverfolgen. Viele Software für gemeinsame Dokumentenbearbeitung (z.B. Word, Google Docs, Etherpad) bieten Wege an, Änderungen nachzuverfolgen, aber ein Versionsverwaltungssystem wie Git geht weit darüber hinaus, indem z.B.:
+* Änderungen innerhalb von Projekten mit gesamten Ordnern und Unterordnern nachverfolgt werden können
+* Änderungen (auch solche, die mehrere Schritte zuvor vorgenommen wurden) immer rückgängig gemacht werden können
+* jemand an einer umfangreichen Änderung in einer parallelen „Version“ des Projekts arbeiten kann, während das Hauptprojekt unabhängig davon weiterbearbeitet werden kann. Wenn die Änderung bereit für die Implementierung ist, dann werden alle Änderungen (sowohl die im Hauptprojekt als auch die in der parallelen Version) automatisch (oder fast immer automatisch) miteinander in Einklang gebracht.
+
+### Relevante Begriffe für die Arbeit mit Github
+#### Repository
+Ein _Repository_ ist ein Ordner, dessen Versionierung verwaltet wird. Das könnte die Quellcode einer Webseite oder Software sein aber auch ein Ordner mit experimentellen Daten, die mithilfe eines Softwares ausgewertet werden oder auch eine Masterarbeit, die mithilfe _LaTeX_ geschrieben wird. Ein Repository hat eine **remote**-Version (im "Cloud", auf der Github-Website), sowie mehrere **lokale** Versionen (z.B. auf deinem Computer). Ein Repository kann auch "gespiegelt" werden (z.B. zu einem Repository in einem anderen Dienst), aber das ist für dieses Tutorial nicht so interessant.
+
+##### Datei-Typen in einem Repository
+Das Repository könnte beliebige Unterordner und Dateitypen enthalten (Texte Dateien, Bilder, Videos, PDF, usw.) - aber von der Versionsverwaltung (die auf Zeilenebene der einzelnen Dateien funktioniert) profitieren am meisten **textbasierte Dateien**, z.B. ``.txt.``, ``.html``, ``.css``, ``.json`` usw. Andere Dateien wie z.B. Word-Dateien können nur als ganze Dateien betrachtet werden.
+
+#### Klonen
+Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-Repository **klonen** - das erstellt eine lokales Repository sowie ein lokales Verzeichnis (local directory) auf deinem Rechner.

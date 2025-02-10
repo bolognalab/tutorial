@@ -1,6 +1,7 @@
 # Github-Tutorial
 *Eine Einführung in Github - mit einem Schuss Website-Design*
 Dieses Tutorial richtet sich an Mitarbeitende und Partner:innen des bologna.labs, die noch keine Erfahrung mit Github haben. Hoffentlich ist es in Ordnung, wenn wir uns für die Zwecke des Tutorials duzen!
+
 In diesem Tutorial lernst du:
 * was Github ist, was viele relevante Begriffe wie "Repository" und "Commit" heißen sowie einen Überblick, was man mithilfe von Github machen kann
 * wie du mithilfe von Github und einen Quellcode-Editor ein Repository erstellen und bearbeiten kannst
@@ -10,7 +11,7 @@ In diesem Tutorial lernst du:
 
 Während des Tutorials wirst du die Formattierungssprache [Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) nutzen, womit auch dieser Text geschrieben wird. Das benötigt keine spezialisierte Software und ist einfach zu lernen (falls du noch nicht damit auskennst)
 
-In diesem Tutorial lernst du nicht:
+In diesem Tutorial lernst du u.a. **nicht**:
 * neue Funktionen für deine Website zu programmieren
 * Github-Funktionen mit dem Command Prompt (CMD) zu steuern.
 
@@ -37,10 +38,10 @@ Ein Versionsverwaltungssystem ist eine Herangehensweise, Änderungen in einem Do
 ## Repository
 Ein _Repository_ ist ein Ordner, dessen Versionierung verwaltet wird. Das könnte die Quellcode einer Webseite oder Software sein aber auch ein Ordner mit experimentellen Daten, die mithilfe eines Softwares ausgewertet werden oder auch eine Masterarbeit, die mithilfe _LaTeX_ geschrieben wird. Ein Repository hat eine **remote**-Version (im "Cloud", auf der Github-Website), sowie mehrere **lokale** Versionen (z.B. auf deinem Computer). Die remote-Version wird auch ``origin`` genannt. Ein Repository kann auch "gespiegelt" werden (z.B. zu einem Repository in einem anderen Dienst), aber das ist für dieses Tutorial nicht so interessant.
 
-##### Datei-Typen in einem Repository
+#### Datei-Typen in einem Repository
 Das Repository könnte beliebige Unterordner und Dateitypen enthalten (Texte Dateien, Bilder, Videos, PDF, usw.) - aber von der Versionsverwaltung (die auf Zeilenebene der einzelnen Dateien funktioniert) profitieren am meisten **textbasierte Dateien**, z.B. ``.txt.``, ``.html``, ``.css``, ``.json`` usw. Andere Dateien wie z.B. Word-Dateien können nur als ganze Dateien betrachtet werden.
 
-## Klonen
+### Ein Repository klonen (_clone_)
 Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-Repository **klonen** - das erstellt eine lokales Repository sowie ein lokales Verzeichnis (local directory) auf deinem Rechner.
 
 :pencil2: **Ausprobieren**
@@ -51,7 +52,7 @@ Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-
 
 ## Branches
 ![](branches.png)
-"Branches" sind parallelle "Zweigen" oder Versionen des Repositorys. Der Hauptbranch eines Repositorys auf Github heißt in der Regel (``main``). Ein neuer Branch fängt an als eine "Kopie" des Hauptbranches (oder sogar eines anderen Branches) und entwickelt sich parallel. Für Software-Projekte ist es in der Regel vorgesehen, dass eine Aufgabe zuerst in einem Branch durchgeführt und getestet wird, bevor die Änderungen am Ende in das gesamte Projekt zusammengeführt werden. Die Aktion der Zusammenführung heißt ``merge``. Für den ersten Teil des Live-Tutorials arbeiten wir an dem Branch ``workshop``, der schon erstellt wurde. Für spätere Teile werdest du die Chance haben, einen Branch selbst zu erstellen. 
+"Branches" sind parallelle "Zweigen" oder Versionen des Repositorys. Der Hauptbranch eines Repositorys auf Github heißt in der Regel (``main``). Ein neuer Branch fängt an als eine "Kopie" des Hauptbranches (oder sogar eines anderen Branches) und entwickelt sich parallel. Für Software-Projekte ist es in der Regel vorgesehen, dass eine Aufgabe zuerst in einem Branch durchgeführt und getestet wird, bevor die Änderungen am Ende in das gesamte Projekt zusammengeführt werden. Die Aktion der Zusammenführung heißt ``merge``. Für den ersten Teil des Live-Workshops arbeiten wir an dem Branch ``workshop``, der schon erstellt wurde. Für spätere Teile werdest du die Chance haben, einen Branch selbst zu erstellen. 
 
 :pencil2: **Ausprobieren**
 
@@ -106,6 +107,6 @@ Hier können HTML5 Vorlagen heruntergeladen werden - wenn die heruntergeladenen 
 
 :pencil2: **Ausprobieren**
 
-Suche dir eine Vorlage aus und erstelle eine Github-Pages-Seite in deinem eigenen Profil mithilfe der Dokumentation.
+* Suche dir eine Vorlage aus und erstelle eine Github-Pages-Seite in deinem eigenen Profil mithilfe der Dokumentation.
 
 _Hinweis: Nur das Username (z.B. ``naspitha``) (oder der Name einer Github-Organisation (z.b. ``bolognalab``)) darf hier angegeben werden - sonst funktioniert die Seite nicht. Daraus folgt, dass pro Nutzer:in und pro Organisation nur eine Seite mithilfe von Github Pages erstellt werden kann. Github Pages ist kostenlos und das Repository kann bis 1 GB Dateigröße enthalten._

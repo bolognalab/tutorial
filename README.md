@@ -15,4 +15,9 @@ In diesem Tutorial lernst du nicht:
 * Github-Funktionen mit dem Command Prompt (CMD) zu steuern.
 
 <hr>
-## Was ist Github
+
+## 1. Was ist Github?
+Github ist ein (grundsätzlich) kostenloser Dienst für die gemeinsame Entwicklung von Softwareprojekten. Seine Grundlage ist die Software [Git](https://de.wikipedia.org/wiki/Git), die nichts anderes als ein **Versionsverwaltungsystem** ist.
+
+*Und was ist ein Versionsverwaltungsystem?*
+Stell dir vor

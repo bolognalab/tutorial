@@ -10,5 +10,6 @@
 ## Abschnitt D
 Hallo, ich bin Natalia!
 Ich komme aus Griechenland.
+Ich habe keine Haustiere.
 
 ## Abschnitt E

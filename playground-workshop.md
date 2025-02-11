@@ -8,5 +8,7 @@ Dieser Abschnitt ist die Einleitung
 ## Abschnitt C
 
 ## Abschnitt D
+Hallo, ich bin Natalia!
+Ich komme aus Griechenland.
 
 ## Abschnitt E

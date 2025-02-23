@@ -90,6 +90,10 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 * Schaue dich die Remote-Version des Repositorys und beobachte, wie die Änderungen von dir und anderen miteinander zusammengeführt wurden.
 
 ## Pull Requests
+_Pull Requests_ müssen durchgeführt werden, wenn (a) ein Branch mit einem anderen Branch zusammengeführt wird oder (b) eine Person ohne Schreibzugang zu einem Repository ihre vorgeschlagenen Änderungen dazu pushen möchte. Im Fall (b) ist eine _Pull Request_ eigentlich eine Anfrage (_request_) an einer Person mit höherem Zugriff, die vorgeschlagenen Commits von der Version des Repositorys der Person ohne Schreibzugang zu der Hauptversion des Repositorys zu pullen.
+
+Wichtig: es muss bei einer _Pull Request_ angegeben werden, in welchem Branch des Repositorys die Änderungen vorgenommen werden sollen.
+
 :pencil2: **Ausprobieren**
 * Stell dir sicher, du bist noch auf dem Branch ``workshop``
 * In Github Desktop, klicke auf: _Current Branch: workshop > New Branch >_ [Name, z.B. _workshop-laura_] _, Create branch based on 'workshop'_. 

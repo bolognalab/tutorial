@@ -36,7 +36,7 @@ Ein Versionsverwaltungssystem ist eine Herangehensweise, Änderungen in einem Do
 
 ### Relevante Begriffe: 
 ## Repository
-Ein _Repository_ ist ein Ordner, dessen Versionierung verwaltet wird. Das könnte die Quellcode einer Webseite oder Software sein aber auch ein Ordner mit experimentellen Daten, die mithilfe eines Softwares ausgewertet werden oder auch eine Masterarbeit, die mithilfe _LaTeX_ geschrieben wird. Ein Repository hat eine **remote**-Version (im "Cloud", auf der Github-Website), sowie mehrere **lokale** Versionen (z.B. auf deinem Computer). Die remote-Version wird auch ``origin`` genannt. Ein Repository kann auch "gespiegelt" werden (z.B. zu einem Repository in einem anderen Dienst), aber das ist für dieses Tutorial nicht so interessant.
+Ein _Repository_ ist ein Ordner, dessen Versionierung verwaltet wird. Das könnte die Quellcode einer Webseite oder Software sein aber auch ein Ordner mit experimentellen Daten, die mithilfe eines Softwares ausgewertet werden oder auch eine Masterarbeit, die mithilfe _LaTeX_ geschrieben wird. Ein Repository hat eine **remote**-Version (im "Cloud", auf der Github-Website), sowie mehrere **lokale** Versionen (z.B. auf deinem Computer). Die remote-Version wird auch ``origin`` genannt. Ein Repository kann auch "gespiegelt" werden (z.B. zu einem Repository in einem anderen Dienst), aber das ist für dieses Tutorial nicht so interessant. Repositories können entweder öffentlich (*public*) oder privat (*private*) sein.
 
 #### Datei-Typen in einem Repository
 Das Repository könnte beliebige Unterordner und Dateitypen enthalten (Texte Dateien, Bilder, Videos, PDF, usw.) - aber von der Versionsverwaltung (die auf Zeilenebene der einzelnen Dateien funktioniert) profitieren am meisten **textbasierte Dateien**, z.B. ``.txt.``, ``.html``, ``.css``, ``.json`` usw. Andere Dateien wie z.B. Word-Dateien können nur als ganze Dateien betrachtet werden.
@@ -49,6 +49,13 @@ Um an einem Projekt auf den eigenenen Rechner zu arbeiten musst du ein _remote_-
 * Klone dieses ``tutorial`` Repository mithilfe Github Desktop zu einem beliebigen Ort auf deinem Rechner.
 * Klicke dann auf _"Show in Explorer"_, um das Verzeichnis namens ``tutorial`` lokal zu öffnen. 
 * Darin solltest du alle Inhalte des Repositorys sehen können, einschließlich der Datei ``playground.md``. Mache aber noch nichts mit dieser Datei.
+
+## Organizations, Teams und Zugriffstypen (Neu 25.02.2025)
+Eine Github-Organisation ist eine Einheit, die aus einem oder mehreren Mitgliedern besteht und ihren eigenen Satz von Repositories enthält. Mitglieder einer Organisation können alle Repositories der Organisation sehen, auch private Repositories. Die Admins der Organisation können Regeln für den Zugriff verschiedener Mitglieder auf Repositories festlegen. Dies lässt sich durch die Verwendung von „Teams“ leicht tun. z.B. gilt derzeit das Folgende für die Organisation "bolognalab":
+* Alle Mitglieder haben _Read_-Zugang (Lesezugriff) zu allen Repositories der Organisation. _Read_-Zugang heißt, ein Mitglied kann die Repositories sehen und "forken" (eine eigene Kopie davon erstellen, die sie dann bearbeiten). Nützer:innen mit _Read_-Zugang können ihre Änderungen nicht direkt _pushen_, sondern sie müssen erstmal ein "Pull Request" beantragen, die jemand mit "höherem" Zugriff zum Repository annehmen muss.
+* Ein Team namens ``tutorial-team`` wurde erstellt, wo alle Teilnehmer:innen des Live-Workshops hinzugefügt wurden. Diesem Team wurde _Write_-Zugang (Schreibzugriff) zum Repository ``tutorial`` gewährt und sie können direkt ihre Änderungen (ohne Genehmigung) zum Repository ``tutorial`` pushen. Nutzer:innen mit Schreibzugriff brauchen ebenfalls nicht, das Repository zu forken, um das zu bearbeiten.
+* Admins der Organisation haben sowieso Schreibzugang zu allen Repositories.
+* Es gibt andere Arte von Zugriffstypen (z.B. _Triage_) und viele Möglichkeiten, Zugriff feiner zu verwalten.
 
 ## Branches
 ![](branches.png)
@@ -68,7 +75,6 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 * _push_ : Aktualisiert das remote-Repository mit neuen Commits aus dem lokalen Repository.
 
 :pencil2: **Ausprobieren**
-
 * Öffne die Datei ``playground-workshop.md`` (im Branch ``workshop``) mit einem Texteditor. 
 * Schreibe irgendwas unter einem der 4 Abschnitte. Speichere anschließend die Datei. 
 * Wechsele wieder zum Github Desktop. Deine Änderungen sollten unter "Changes" sichtbar sein.
@@ -85,7 +91,6 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 
 ## Pull Requests
 :pencil2: **Ausprobieren**
-
 * Stell dir sicher, du bist noch auf dem Branch ``workshop``
 * In Github Desktop, klicke auf: _Current Branch: workshop > New Branch >_ [Name, z.B. _workshop-laura_] _, Create branch based on 'workshop'_. 
 * Klicke auf "_Publish Branch"
@@ -93,9 +98,7 @@ Commits werden nur auf die Version des Repositorys angewandt, an dem die Person 
 * Clicke auf "_Preview Pull Request_" und folge die Anleitungen auf dem Browser, um ein ``merge`` von deinem Branch zum ``workshop`` branch durchzuführen.
 
 ## Conflicts
-
-
-## Organizations
+_Conflicts_ (Mergekonflikte) geschehen manchmal, wenn zwei unterschiedliche Änderungen zur selben Zeile derselben Datei in verschiedenen Branches des Repositorys (z.B. durch mehrere Personen) vorgenommen werden. In diesem Fall ist ein Push nicht möglich, sondern die Änderungen müssen manuell abgeglichen werden. In diesem Fall erscheinen im Datei an der betroffenen Stelle Konfliktmarker (``<<<<<<<``, ``=======`` und ``>>>>>>>``). Eine Person muss diese Konfliktmarker löschen und diesen Teil des Dokuments so bearbeiten, dass er die gewünschte Endversion widerspiegelt. Dann genehmigt diese Person die Zusammenführung (_merge_) der beiden Branches. Mehr Details findest du hier: https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github
 
 
 # 2. Webseiten mit Github Pages erstellen
@@ -106,7 +109,6 @@ https://html5up.net/
 Hier können HTML5 Vorlagen heruntergeladen werden - wenn die heruntergeladenen Dateien für eine Vorlage (und die vorgegebene Struktur) entpackt und in einem Github-Repository kopiert werden, dann ist die Seite schon bereit für den Einsatz! Die einzige Voraussetzung - wie in der Dokumentation angegeben - ist, dass der Name des Repositorys [username].github.io lautet. Die Seite ist dann unter ``https://[username].github.io`` abrufbar.
 
 :pencil2: **Ausprobieren**
-
 * Suche dir eine Vorlage aus und erstelle eine Github-Pages-Seite in deinem eigenen Profil mithilfe der Dokumentation.
 
 _Hinweis: Nur das Username (z.B. ``naspitha``) (oder der Name einer Github-Organisation (z.b. ``bolognalab``)) darf hier angegeben werden - sonst funktioniert die Seite nicht. Daraus folgt, dass pro Nutzer:in und pro Organisation nur eine Seite mithilfe von Github Pages erstellt werden kann. Github Pages ist kostenlos und das Repository kann bis 1 GB Dateigröße enthalten._

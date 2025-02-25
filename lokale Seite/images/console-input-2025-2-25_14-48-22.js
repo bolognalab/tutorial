@@ -1,0 +1,1 @@
+document.getElementById("listenInfo").classList.add("shrunk")

@@ -1,0 +1,22 @@
+img {
+    width: 100%;
+}
+h3.shrunk {
+    color: red;
+    transition: all 0.5s;
+}
+/* #listenInfo:hover {
+    font-size: 150%;
+} */
+.firstPoint {
+    font-weight: bold;
+}
+.secondPoint {
+    font-style: italic;
+}
+.importantPoint {
+    color: green;
+}
+.firstPoint.importantPoint {
+    color: #ca6a0a
+}
